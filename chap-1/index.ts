@@ -11,7 +11,7 @@ export class Node {
 
 export function buildTree(arr: number[], start: number, end: number) {
   if (start > end) return null;
-  const middle = start + Math.floor((end - start) / 2);
+  const middle: number = start + Math.floor((end - start) / 2);
   const root: Node = new Node(arr[middle]);
   root.left = buildTree(arr, start, middle - 1);
   root.right = buildTree(arr, middle + 1, end);
@@ -19,7 +19,7 @@ export function buildTree(arr: number[], start: number, end: number) {
 }
 
 export function addChild(node: Node, val: number, toLeft: boolean) {
-  let child = new Node(val);
+  let child: Node = new Node(val);
   return toLeft ? (node.left = child) : (node.right = child);
 }
 
