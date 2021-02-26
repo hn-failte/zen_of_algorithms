@@ -16,9 +16,41 @@ const combinationSum = function (coins: number[], target: number) {
       if (nextSum <= target) comb(index, nextSum, arr.concat(combItem));
     }
   };
-  // 主要的遍历
   comb(0, 0, []);
   return results;
 };
 
-console.log(combinationSum([2, 3, 5], 21));
+(() => {
+  const startTime = new Date().getTime();
+  combinationSum([2, 3, 5], 21);
+  const endTime = new Date().getTime();
+  console.log("cost time:", endTime - startTime);
+})();
+
+(() => {
+  const startTime = new Date().getTime();
+  combinationSum([2, 3, 5], 42);
+  const endTime = new Date().getTime();
+  console.log("cost time:", endTime - startTime);
+})();
+
+(() => {
+  const startTime = new Date().getTime();
+  combinationSum([2, 3, 5], 63);
+  const endTime = new Date().getTime();
+  console.log("cost time:", endTime - startTime);
+})();
+
+(() => {
+  const startTime = new Date().getTime();
+  combinationSum([2, 3, 5], 630);
+  const endTime = new Date().getTime();
+  console.log("cost time:", endTime - startTime);
+})();
+
+(() => {
+  const startTime = new Date().getTime();
+  combinationSum([2, 3, 5], 6300);
+  const endTime = new Date().getTime();
+  console.log("cost time:", endTime - startTime);
+})();
