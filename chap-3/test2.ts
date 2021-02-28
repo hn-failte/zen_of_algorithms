@@ -17,6 +17,21 @@ const change = (coins: number[], n: number, cache: Map<number, number>) => {
   return count;
 };
 
+// const coinChange = (coins: number[], n: number) => {
+//   const Max = n + 1;
+//   const dp: number[] = new Array(Max);
+//   dp.fill(Max);
+//   dp[0] = 0;
+//   for (let i = 1; i <= n; ++i) {
+//     for (let j = 0; j < coins.length; ++j) {
+//       if (coins[j] <= i) {
+//         dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+//       }
+//     }
+//   }
+//   return dp[n] > n ? -1 : dp[n];
+// };
+
 (() => {
   const coins = [2, 3, 5];
   const startTime = new Date().getTime();

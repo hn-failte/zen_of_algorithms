@@ -6,6 +6,7 @@
 const combinationSum = function (coins: number[], target: number) {
   // 最小硬币数
   let min = 0;
+  // coins.sort((a, b) => b - a); // 从大到小排序
   const length = coins.length;
   const comb = (start: number, sum: number, count: number) => {
     if (min && count >= min) return;
